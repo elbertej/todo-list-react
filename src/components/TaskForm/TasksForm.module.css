@@ -1,0 +1,39 @@
+.taskForm {
+  position: absolute;
+  height: 3.375rem;
+  width: 100%;
+  max-width: 46rem;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  bottom: calc(-3.375rem / 2);
+}
+
+.taskForm input {
+  height: 100%;
+  flex: 1;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: var(--gray-100);
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+}
+
+.taskForm button {
+  height: 100%;
+  padding: 0 1rem;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  border: none;
+  gap: 0.375rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.taskForm input::placeholder {
+  color: var(--gray-300);
+}

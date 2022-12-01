@@ -1,18 +1,18 @@
+import { TaskForm } from '../TaskForm';
+
 import styles from './Header.module.css';
+import todoLogo from "../../assets/todoLogo.svg"
 
-import rocketLogo from '../../assets/rocket-logo.svg';
+interface Props {
+    onAddTask: (taskContent: string) => void;
+}
 
-export function Header () {
+export function Header ({ onAddTask }: Props) {
     return (
         <header className={styles.header}>
-            <div className={styles.headerConteiner}>
-                <img src={rocketLogo} alt="rocket logo" />
+            <img src={todoLogo} />
 
-                <div className={styles.titleConteiner}>
-                    <strong className={styles.strongBlue}>to</strong>
-                    <strong className={styles.strongPurple}>do</strong>
-                </div>
-            </div>
+            <TaskForm onAddTask={onAddTask}/>
         </header>
     );
 }
